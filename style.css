@@ -1,0 +1,194 @@
+:root {
+      --primary: #6366f1;
+      --secondary: #22c55e;
+      --dark: #0f172a;
+      --gray: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #eef2ff, #f8fafc);
+      color: var(--dark);
+      padding: 20px;
+    }
+
+    .resume {
+      max-width: 1000px;
+      margin: auto;
+      background: var(--card);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      overflow: hidden;
+      animation: fade 1s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #818cf8);
+      color: #fff;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--secondary);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0;
+    }
+
+    aside {
+      background: #f1f5f9;
+      padding: 32px;
+    }
+
+    section {
+      padding: 32px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .info p {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      color: var(--gray);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e0e7ff;
+      color: var(--primary);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin: 6px 6px 0 0;
+    }
+
+    .block {
+      margin-bottom: 26px;
+    }
+
+    .block h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .block span {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .block p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-top: 6px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: var(--gray);
+      background: #f8fafc;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      aside, section {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      header {
+        padding: 40px 16px;
+      }
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+    .toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 18px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 1000;
+    }
+
+    body.dark {
+      --bg: #020617;
+      --card: #020617;
+      --dark: #e5e7eb;
+      --gray: #9ca3af;
+      background: linear-gradient(180deg, #020617, #020617);
+    }
+
+    body.dark aside {
+      background: #020617;
+    }
+
+    body.dark footer {
+      background: #020617;
+    }
